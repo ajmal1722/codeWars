@@ -113,3 +113,41 @@ function persistence(num) {
 function descendingOrder(n){
   return parseInt(n.toString().split('').sort((a, b) => b - a).join(''))
 }
+
+
+// Given n, take the sum of the digits of n. If that value has more 
+// than one digit, continue reducing in this way until a single-digit 
+// number is produced. The input will be a non-negative integer.
+
+// Examples
+//     16  -->  1 + 6 = 7
+//    942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
+// 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
+// 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
+
+function digitalRoot(n) {
+  // Keep looping until the sum is a single digit
+  while (n >= 10) {
+    // Convert the number to a string to get its digits
+    const nStr = n.toString();
+
+    // Calculate the sum of the digits
+    n = nStr.split('').reduce((acc, val) => acc + parseInt(val), 0);
+  }
+
+  // Return the single-digit sum
+  return n;
+}
+/*************************               ****************************** */
+// using recursion
+function digitalRoot(n) {
+  // Convert the number to a string to get its digits
+  const nStr = n.toString();
+
+  // Calculate the sum of the digits
+  const sum = nStr.split('').reduce((acc, val) => acc + parseInt(val), 0);
+
+  // If the sum has more than one digit, recursively call the function with the sum
+  // Otherwise, return the single-digit sum
+  return sum >= 10 ? digitalRoot(sum) : sum;
+}
