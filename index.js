@@ -151,3 +151,36 @@ function digitalRoot(n) {
   // Otherwise, return the single-digit sum
   return sum >= 10 ? digitalRoot(sum) : sum;
 }
+
+
+
+// Your task is to sort a given string. Each word in the string will contain 
+// a single number. This number is the position the word should have in the result.
+
+// Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+
+// If the input string is empty, return an empty string. The words in the 
+// input String will only contain valid consecutive numbers.
+
+// Examples
+// "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+// "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+// ""  -->  ""
+
+function order(words) {
+  // If the input string is empty, return an empty string
+  if (words === "") {
+    return "";
+  }
+
+  // Split the string into words
+  const wordArray = words.split(" ");
+
+  // Sort the words based on the number within each word
+  const sortedWords = wordArray.sort(function (a, b) {
+    return a.match(/\d/) - b.match(/\d/);
+  });
+
+  // Join the sorted words into a string and return
+  return sortedWords.join(" ");
+}
