@@ -247,3 +247,39 @@ function narcissistic(value) {
   console.log((result))
   return parseInt(result) === value;
 }
+
+
+
+// Given a string of words, you need to find the highest scoring word.
+
+// Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+
+// For example, the score of abad is 8 (1 + 2 + 1 + 4).
+
+// You need to return the highest scoring word as a string.
+
+// If two words score the same, return the word that appears earliest in the original string.
+
+// All letters will be lowercase and all inputs will be valid.
+
+function high(x){
+  const words = x.split(' ');
+  
+  let sum = 0;
+  let sumOfArray = []
+  for (let i = 0; i < words.length; i++) {
+    for (let j = 0; j < words[i].length; j++) {
+      sum += (words[i].charCodeAt(j) - 96)
+      // console.log(words[i].charCodeAt(j))
+    } 
+    sumOfArray.push(sum); 
+    sum = 0;
+  }
+  // console.log(sum)
+  // console.log(sumOfArray)
+  // console.log(sumOfArray.indexOf(Math.max(...sumOfArray)))
+  const maxIndex = sumOfArray.indexOf(Math.max(...sumOfArray));
+  console.log(words[maxIndex])
+  return words[maxIndex];   
+}
+// high('what time are we climbing up the volcano');
