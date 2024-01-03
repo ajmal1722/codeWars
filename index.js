@@ -329,3 +329,16 @@ function likes(names) {
 function arrayDiff(a, b) {
   return   a.filter(item => !b.includes(item)) 
 }
+
+
+
+// Simple, given a string of words, return the length of the shortest word(s).
+
+// String will never be empty and you do not need to account for different data types.
+function findShort(s){
+  const words = s.split(' ');
+  const wordLengths = words.map(x => x.length)
+  return Math.min(...wordLengths)
+}
+
+findShort('Testing for fixed tests');
