@@ -340,5 +340,26 @@ function findShort(s){
   const wordLengths = words.map(x => x.length)
   return Math.min(...wordLengths)
 }
-
 findShort('Testing for fixed tests');
+
+
+
+// There is an array with some numbers. All numbers are equal except 
+// for one. Try to find it!
+
+// findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2
+// findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
+// It’s guaranteed that array contains at least 3 numbers.
+
+// The tests contain some very huge arrays, so think about performance.
+
+function findUniq(arr) {
+  const counts = arr.reduce((acc, num) => {
+    acc[num] = (acc[num] || 0) + 1;
+    console.log(acc[num])
+    return acc;
+  }, {});
+
+  return parseFloat(Object.keys(counts).find(key => counts[key] === 1));
+}
+findUniq([ 1, 0, 0 ])
