@@ -471,6 +471,8 @@ function solution(str, ending){
 
 function digPow(n, p){
   const sum = n.toString().split('').reduce((acc, val) => acc + Math.pow(val, +p++), 0 )
+  // const k = sum / n;
+  // return Number.isInteger(k) ? k : -1;
   let k = 1;
   while(n * k !== sum && n * k < sum) { 
     k++;
