@@ -1,3 +1,4 @@
+// 1.
 // Create a function that takes an integer as an argument and returns "Even" for even 
 // numbers or "Odd" for odd numbers.
 
@@ -9,8 +10,8 @@ function evenOrOdd(number) {
     }
   }
 
-  
-//   An isogram is a word that has no repeating letters, consecutive or 
+  // 2.
+// An isogram is a word that has no repeating letters, consecutive or 
 // non-consecutive. Implement a function that determines whether 
 // a string that contains only letters is an isogram. Assume the
 //  empty string is an isogram. Ignore letter case.
@@ -49,6 +50,7 @@ function isIsogram(str) {
   }
  
 
+  // 3.
   // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
   // Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
@@ -69,6 +71,8 @@ function isIsogram(str) {
   }
 
 
+
+  // 4.
 //  Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
 
 // Example
@@ -88,6 +92,7 @@ function createPhoneNumber(numbers){
   return format;
 }
 
+ // 5.
 // Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, 
 // which is the number of times you must multiply the digits in num until you reach a single digit.
 
@@ -99,6 +104,7 @@ function persistence(num) {
 }
 
 
+//6.
 // Your task is to make a function that can take any non-negative integer as an argument and return
 // it with its digits in descending order. Essentially, rearrange the digits to create 
 // the highest possible number.
@@ -115,6 +121,7 @@ function descendingOrder(n){
 }
 
 
+// 7.
 // Given n, take the sum of the digits of n. If that value has more 
 // than one digit, continue reducing in this way until a single-digit 
 // number is produced. The input will be a non-negative integer.
@@ -154,6 +161,7 @@ function digitalRoot(n) {
 
 
 
+// 8.
 // Your task is to sort a given string. Each word in the string will contain 
 // a single number. This number is the position the word should have in the result.
 
@@ -186,7 +194,7 @@ function order(words) {
 }
 
 
-
+// 9.
 // Return the number (count) of vowels in the given string.
 
 // We will consider a, e, i, o, u as vowels for this Kata (but not y).
@@ -206,7 +214,7 @@ function getCount(str) {
 
 
 
-
+// 10.
 // Complete the method/function so that it converts dash/underscore 
 // delimited words into camel casing. The first word within the 
 // output should be capitalized only if the original word was 
@@ -223,7 +231,7 @@ function getCount(str) {
 
 
 
-
+// 11.
 // A Narcissistic Number (or Armstrong Number) is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).
 
 // For example, take 153 (3 digits), which is narcissistic:
@@ -249,7 +257,7 @@ function narcissistic(value) {
 }
 
 
-
+// 12.
 // Given a string of words, you need to find the highest scoring word.
 
 // Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
@@ -286,7 +294,7 @@ function high(x){
 
 
 
-
+// 13.
 // You probably know the "like" system from Facebook and other pages. People can "like" blog posts, 
 // pictures or other items. We want to create the text that should be displayed next to such an item.
 
@@ -317,6 +325,7 @@ function likes(names) {
 
 
 
+// 14. 
 // Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
 
 // It should remove all values from list a, which are present in list b keeping their order.
@@ -331,7 +340,7 @@ function arrayDiff(a, b) {
 }
 
 
-
+// 15.
 // Simple, given a string of words, return the length of the shortest word(s).
 
 // String will never be empty and you do not need to account for different data types.
@@ -343,7 +352,7 @@ function findShort(s){
 findShort('Testing for fixed tests');
 
 
-
+// 16. 
 // There is an array with some numbers. All numbers are equal except 
 // for one. Try to find it!
 
@@ -366,7 +375,7 @@ findUniq([ 1, 0, 0 ])
 
 
 
-
+// 17.
 // Write a function that takes in a string of one or more words, 
 // and returns the same string, but with all words that have five or 
 // more letters reversed (Just like the name of this Kata). 
@@ -395,7 +404,7 @@ function spinWords(string){
 
 
 
-
+// 18.
 // Complete the solution so that it returns true if the first argument(string) 
 // passed in ends with the 2nd argument (also a string).
 
@@ -410,7 +419,7 @@ function solution(str, ending){
 
 
 
-
+// 19.
 // Some numbers have funny properties. For example:
 
 // 89 --> 8¹ + 9² = 89 * 1
@@ -483,7 +492,7 @@ digPow(89, 1)
 
 
 
-
+// 20.
 // Build a pyramid-shaped tower, as an array/list of strings,
 // given a positive integer number of floors. A tower block is 
 // represented with "*" character.
@@ -511,7 +520,7 @@ function towerBuilder(nFloors) {
 towerBuilder(3)
 
 
-
+// 21.
 // Write a function that will return the count of distinct case-insensitive 
 // alphabetic characters and numeric digits that occur more than once 
 // in the input string. The input string can be assumed to contain only 
@@ -544,7 +553,7 @@ function duplicateCount(text){
 duplicateCount("abcdea")
 
 
-
+// 22.
 // The main idea is to count all the occurring characters in a string. 
 // If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
 
@@ -563,7 +572,7 @@ function count(string) {
  count('abac');
 
 
-
+// 23.
 //  Given two integers a and b, which can be positive or negative, find 
 //  the sum of all the integers between and including them and 
 //  return it. If the two numbers are equal return a or b.
@@ -587,9 +596,52 @@ function getSum(a, b){
   
   for (let i = a; i <= b; i++){
     sum += i
-    console.log(i);
+    // console.log(i);
   }
-  console.log(sum)
+  // console.log(sum)
  return sum
 }
 getSum(0,0)
+
+
+
+// 24.
+// The museum of incredible dull things wants to get rid of some exhibitions. 
+// Miriam, the interior architect, comes up with a plan to remove the 
+// most boring exhibitions. She gives them a rating, and then 
+// removes the one with the lowest rating.
+
+// However, just as she finished rating all exhibitions, 
+// she's off to an important fair, so she asks you to write 
+// a program that tells her the ratings of the items after 
+// one removed the lowest one. Fair enough.
+
+// Task
+// Given an array of integers, remove the smallest value. Do not mutate 
+// the original array/list. If there are multiple elements with the same 
+// value, remove the one with a lower index. If you get an empty array/list, 
+// return an empty array/list.
+
+// Don't change the order of the elements that are left.
+
+// Examples
+// * Input: [1,2,3,4,5], output = [2,3,4,5]
+// * Input: [5,3,2,1,4], output = [5,3,2,4]
+// * Input: [2,2,1,2,1], output = [2,2,2,1]
+
+// function removeSmallest(numbers) {
+//   const min = numbers.indexOf(Math.min(...numbers))
+//   // console.log(Math.min(...numbers))
+//   // console.log('min:', min)
+//   const removedArray = numbers.splice(min,1);
+//   // console.log('numbers', numbers)
+//   return numbers
+// }                  this function will mutate the original array, but output is same
+removeSmallest([ 2, 3,-5, 4, 5])
+function removeSmallest(numbers) {
+  const min = numbers.indexOf(Math.min(...numbers))
+
+  const result = numbers.filter((item,index) => index !== min )
+   console.log('array without smallest Element:', result)
+  return result
+}
