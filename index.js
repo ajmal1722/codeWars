@@ -642,6 +642,33 @@ function removeSmallest(numbers) {
   const min = numbers.indexOf(Math.min(...numbers))
 
   const result = numbers.filter((item,index) => index !== min )
-   console.log('array without smallest Element:', result)
+  //  console.log('array without smallest Element:', result)
   return result
 }
+
+
+// 25.
+// Given an array of integers, find the one that appears an odd number of times.
+
+// There will always be only one integer that appears an odd number of times.
+
+// Examples
+// [7] should return 7, because it occurs 1 time (which is odd).
+// [0] should return 0, because it occurs 1 time (which is odd).
+// [1,1,2] should return 2, because it occurs 1 time (which is odd).
+// [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
+// [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
+function findOdd(A) {
+  let numCount = {}
+  A.forEach(item => {
+    numCount[item] = (numCount[item] || 0) + 1
+  })
+  // console.log(nums)
+  for(const num in numCount){
+    if(numCount[num] % 2 !== 0) {
+      // console.log(parseInt(num))
+      return parseInt(num)
+    }
+  }
+}
+findOdd([1,1,2,-2,5,2,4,4,-1,-2,5])
