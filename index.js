@@ -685,8 +685,22 @@ findOdd([1,1,2,-2,5,2,4,4,-1,-2,5])
 function accum(s) {
 	return s.split('').map((char, index) => {
     const repeatedArray = char.repeat(index + 1)
-    console.log(`${repeatedArray.charAt(0).toUpperCase()}${repeatedArray.slice(1).toLowerCase()}`)
+    // console.log(`${repeatedArray.charAt(0).toUpperCase()}${repeatedArray.slice(1).toLowerCase()}`)
     return `${repeatedArray.charAt(0).toUpperCase()}${repeatedArray.slice(1).toLowerCase()}`
   } ). join('-')
 }
 accum("ZpglnRxqenU")
+
+
+// 27.
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+// Example
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+function solution(string) {
+  // console.log(string.replace(/([a-z])([A-Z])/g, '$1 $2'))
+  return string.replace(/([a-z])([A-Z])/g, '$1 $2')
+}
+solution('camelCasingTest')
