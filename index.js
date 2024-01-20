@@ -767,3 +767,37 @@ function isPangram(string){
   return true
 }
 // console.log(isPangram("The quick brown fox jumps over the lazy dog."));
+
+
+
+// 31.
+// You will be given a number and you will need to return it as a string in Expanded Form. For example:
+
+// expandedForm(12); // Should return '10 + 2'
+// expandedForm(42); // Should return '40 + 2'
+// expandedForm(70304); // Should return '70000 + 300 + 4'
+// NOTE: All numbers will be whole numbers greater than 0.
+
+function expandedForm(num) {
+  // Convert the number to a string
+  let numStr = num.toString();
+  
+  // Initialize an empty array to store the expanded form components
+  let expandedFormArr = [];
+
+  // Iterate through each digit of the number
+  for (let i = 0; i < numStr.length; i++) {
+      // If the digit is not zero, add its expanded form to the array
+      if (numStr[i] !== '0') {
+          let zeros = '0'.repeat(numStr.length - i - 1);
+          expandedFormArr.push(numStr[i] + zeros);
+          console.log(expandedFormArr);
+      }
+  }
+
+  // Join the array elements with ' + ' to form the final expanded form string
+  let result = expandedFormArr.join(' + ');
+  console.log(result)
+  return result;
+}
+expandedForm(120)
