@@ -791,13 +791,13 @@ function expandedForm(num) {
       if (numStr[i] !== '0') {
           let zeros = '0'.repeat(numStr.length - i - 1);
           expandedFormArr.push(numStr[i] + zeros);
-          console.log(expandedFormArr);
+          // console.log(expandedFormArr);
       }
   }
 
   // Join the array elements with ' + ' to form the final expanded form string
   let result = expandedFormArr.join(' + ');
-  console.log(result)
+  // console.log(result)
   return result;
 }
 expandedForm(120)
@@ -821,9 +821,10 @@ expandedForm(120)
 
 function SeriesSum(n)
 {
-  let sum = 1;
-  for (let i = 1; i < n; i++) {
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
     sum += 1/(i * 3 + 1)
   }
   return sum.toFixed(2)
 }
+// console.log(SeriesSum(2))
