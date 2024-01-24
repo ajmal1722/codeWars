@@ -863,3 +863,20 @@ function countSmileys(arr) {
   return count
 }
 // console.log(countSmileys([':D',':~)',';~D',':)']))
+
+
+
+// 34.
+// Complete the function that accepts a string parameter, and reverses each word 
+// in the string. All spaces in the string should be retained.
+
+// Examples
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+
+function reverseWords(str) {
+  const words = str.split(' ');
+  
+  return words.map(x => x.split('').reverse().join('')).join(' ')
+}
+// console.log(reverseWords('this is an example'))
