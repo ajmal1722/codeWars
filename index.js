@@ -899,7 +899,7 @@ function oddOrEven(array) {
 }
 
 
-
+// 36.
 // Given two arrays a and b write a function comp(a, b) (orcompSame(a, b)) 
 // that checks whether the two arrays have the "same" elements, with the 
 // same multiplicities (the multiplicity of a member is the number of times 
@@ -935,3 +935,35 @@ function oddOrEven(array) {
 //   PureScript, R, Racket, Rust, Shell, Swift).
 // If a or b are nil (or null or None, depending on the language), the 
 // problem doesn't make sense so return false.
+
+
+
+// 37.
+// Count the number of divisors of a positive integer n.
+
+// Random tests go up to n = 500000.
+
+// Examples (input --> output)
+// 4 --> 3 // we have 3 divisors - 1, 2 and 4
+// 5 --> 2 // we have 2 divisors - 1 and 5
+// 12 --> 6 // we have 6 divisors - 1, 2, 3, 4, 6 and 12
+// 30 --> 8 // we have 8 divisors - 1, 2, 3, 5, 6, 10, 15 and 30
+// Note you should only return a number, the count of divisors. The numbers between parentheses
+// are shown only for you to see which numbers are counted in each case.
+
+function getDivisorsCnt(n) {
+  let count = 0;
+  for (let i = 1; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      // If both divisors are the same, count only one
+      if (n / i === i) {
+        count++;
+      } else {
+        // If divisors are different, count both
+        count += 2;
+      }
+    }
+  }
+  return count;
+}
+console.log(getDivisorsCnt(25))
