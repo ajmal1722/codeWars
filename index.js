@@ -1040,7 +1040,7 @@ alphabetPosition('hello world');
 
 
 
-// //41.
+// 41.
 // In this kata you will create a function that takes a list of non-negative 
 // integers and strings and returns a new list with the strings filtered out.
 
@@ -1052,3 +1052,23 @@ alphabetPosition('hello world');
 function filter_list(l) {
   return l.filter(x => typeof x == "number")
  }
+
+
+
+ // 42.
+//  Create a method to see whether the string is ALL CAPS.
+
+// Examples (input -> output)
+// "c" -> False
+// "C" -> True
+// "hello I AM DONALD" -> False
+// "HELLO I AM DONALD" -> True
+// "ACSKLDFJSgSKLDFJSKLDFJ" -> False
+// "ACSKLDFJSGSKLDFJSKLDFJ" -> True
+// In this Kata, a string is said to be in ALL CAPS whenever it does not 
+// contain any lowercase letter so any string containing no letters at all 
+// is trivially considered to be in ALL CAPS.
+
+String.prototype.isUpperCase = function() {
+  return this.toString() === this.toUpperCase();
+}
