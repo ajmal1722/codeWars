@@ -1204,7 +1204,7 @@ function isTriangle(a, b, c) {
   // Check if the sum of any two sides is greater than the third side
   return a + b > c && a + c > b && b + c > a;
 }
-console.log(isTriangle(1, 2, 2));
+// console.log(isTriangle(1, 2, 2));
 
 
 // // 49.
@@ -1256,3 +1256,29 @@ function checkExam(array1, array2) {
   return sum < 0 ? 0: sum;
 }
 // console.log(checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]))
+
+
+
+
+// 51.
+// Trolls are attacking your comment section!
+
+// A common way to deal with this situation is to remove all of the vowels from the
+//  trolls' comments, neutralizing the threat.
+
+// Your task is to write a function that takes a string and return a new string with
+//  all vowels removed.
+
+// For example, the string "This website is for losers LOL!" would become
+//  "Ths wbst s fr lsrs LL!".
+
+// Note: for this kata y isn't considered a vowel.
+function disemvowel(str) {
+  const vowels = 'aeiouAEIOU';
+  let array =[]
+   str.split('').forEach(x => {
+    if (!vowels.includes(x))
+      array.push(x)
+  })
+  return array.join('')
+}
