@@ -1340,4 +1340,15 @@ function oddOnesOut(nums) {
   }
   return nums.filter(num => obj[num] % 2 === 0)
 } 
-oddOnesOut([1, 2, 3, 1, 3, 3])
+oddOnesOut([1, 2, 3, 1, 3, 3]);
+
+
+
+// 54.
+// Sort the given array of strings in alphabetical order, case insensitive. For example:
+
+// ["Hello", "there", "I'm", "fine"]  -->  ["fine", "Hello", "I'm", "there"]
+// ["C", "d", "a", "B"])              -->  ["a", "B", "C", "d"]
+sortme = function( names ){
+  return names.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+}
