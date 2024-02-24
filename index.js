@@ -1372,3 +1372,37 @@ function sumCubes(n){
  } 
   return arr.reduce((sum, val) => sum + val**3, 0)
 }
+
+
+
+// 56.
+// The marketing team is spending way too much time typing in hashtags.
+// Let's help them with our own Hashtag Generator!
+
+// Here's the deal:
+
+// It must start with a hashtag (#).
+// All words must have their first letter capitalized.
+// If the final result is longer than 140 chars it must return false.
+// If the input or the result is an empty string it must return false.
+// Examples
+// " Hello there thanks for trying my Kata"  =>  "#HelloThereThanksForTryingMyKata"
+// "    Hello     World   "                  =>  "#HelloWorld"
+// ""                                        =>  false
+
+function generateHashtag (str) {
+  if (str.trim().length === 0) return false
+  const words = str.split(' ');
+  console.log('words: ', words);
+  const capitalizedWord = words.map(word => {
+    // Check if the word is not undefined and not an empty string
+    return word && word.length > 0 ? word[0].toUpperCase() + word.substr(1) : '';
+  });
+  console.log('capitalizedWord:', capitalizedWord);
+  const toSingleWord = capitalizedWord.join('');
+  console.log('toSingleWord:', toSingleWord)
+  const hashWord = '#' + toSingleWord;
+  console.log(hashWord)
+  return hashWord.length > 140 ? false : hashWord;
+}
+// generateHashtag("code" + " ".repeat(140) + "wars");
