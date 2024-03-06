@@ -1558,3 +1558,29 @@ function nameSuffle(str){
 function smallEnough(a, limit){
   return a.every(x => x <= limit)
 }
+
+
+// 64.
+// Write a function that will take in any array and reverse it.
+
+// Sounds simple doesn't it?
+
+// NOTES:
+
+// Array should be reversed in place! (no need to return it)
+// Usual builtins have been deactivated. Don't count on them.
+// You'll have to do it fast enough, so think about performances
+
+function reverse(arr) {
+  // Get the length of the array
+  const length = arr.length;
+
+  // Iterate up to half of the array length
+  for (let i = 0; i < length / 2; i++) {
+      // Swap elements from the beginning and end of the array
+      const temp = arr[i];
+      arr[i] = arr[length - 1 - i];
+      arr[length - 1 - i] = temp;
+  }
+}
+reverse(['hello', 'world', '!'])
